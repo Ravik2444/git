@@ -1,0 +1,15 @@
+# Installation on linux
+ 
+$ apt-get update 
+$ apt-get install git
+
+# User configuration
+
+$ git config --global user.name " XYZ"
+$ git config --global user.email "xyz@gmail.com"
+$ git config --list or git config -l
+$ git config -e ;To edit the configuration for current repo.
+$ git config -e -global
+$ git config --global -e ;To edit the global configuration in editor.
+$ git config --global core.autocrlf true ;git should detect the OS and treat line ending automatically.
+$ git config --global alias.lg "log --graph --decorate --online --all"
