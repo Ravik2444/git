@@ -36,6 +36,11 @@ $ git branch -d branch_name # To delete a fully merged branch
 $ git branch -D branch_name # To delete a branch forcefully/Not-merged branch.
 $ git show # It will show the HEAD pointer SHA1.
 
+$ git remote -v
+$ git remote add name url
+$ git remote rm name
+
+
 
 
 
