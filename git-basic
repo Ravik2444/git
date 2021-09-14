@@ -9,3 +9,6 @@ $ git commit -m "message for commit"
 $ git log
 $ git log --graph --oneline --decorate
 $ git mv file1 file_new
+$ 
+
+# .gitignore
