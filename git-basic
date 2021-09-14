@@ -6,9 +6,43 @@ $ git status
 $ git diff
 $ git add file_name
 $ git commit -m "message for commit"
+# Above two commands can be combined to a single command.
+# git commit -am "message for commit"
 $ git log
 $ git log --graph --oneline --decorate
 $ git mv file1 file_new
-$ 
+$ git branch branch_name      # create the branch with branch_name.
+$ git checkout branch_name    # It will checkout to the branch_name.
+# We can combine the above two steps in a single step.
+$ git checkout -b branch_name   # It will create as well as checkout & switch to the branch_name.
+$ git branch
+$ git branch -v
+$ git branch -a
+$ git branch --no-merged    # It will show only those branch that is not merged.
+$ git branch --merged
+
+# git merge is used to merge feature branch with main branch.
+# As a good practise, we should merge the main branch to the feature branch first, so we can perform the testing and avoid any error in main branch.
+# To merge the main branch to the feature branch, firstly we have to switch to the feature branch. 
+$ git merge main  # main represent the master branch. And we are on feature branch.
+
+# what is fast forward merge?
+# As we have merged master branch to the feature branch in above step and performed all the testing on the merged code.
+# Now we can merge the feature branch to the master, so the HEAD can point to both master and feature together.
+$ git checkout master
+$ git merge feature # It will show you that fast forward merge have occoured. As we have already merged the master to feature.
+
+$ git branch -d branch_name # To delete a fully merged branch
+$ git branch -D branch_name # To delete a branch forcefully/Not-merged branch.
+$ git show # It will show the HEAD pointer SHA1.
+
+
+
+
+
+
+
+
+
 
 # .gitignore
