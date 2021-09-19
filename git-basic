@@ -40,8 +40,13 @@ $ git remote -v
 $ git remote add name url
 $ git remote rm name
 
-
-
+$ git revert <commit id>  # To revert any commit.
+$ git stash   # To save tracked changed file in the stash.
+$ git stash pop # To bring the changes in stash back.
+$ git reset --mixed   # is used to undo changes made in the working directory and staging area.
+$ git merge --abort    #helps stop the merge process and return back to the state before the merging began.
+$ git diff-tree –r {commit hash}  # -r flag allows the command to list individual files
+                                  # commit hash lists all the files that were changed or added in the commit.
 
 
 
