@@ -1,0 +1,56 @@
+1. Explain the different points when a merge can enter a conflicted stage?
+
+There are two stages when a merge can enter a conflicted stage.
+  a. Starting the merge process
+If there are changes in the working directory of the stage area in the current project, the merge will fail to start
+In this case, conflicts happen due to pending changes that need to be stabilized using different Git commands
+  
+  b. During the merge process
+The failure during the merge process indicates that there’s a conflict between the local branch and the branch being merged
+In this case, Git resolves as much as possible, but some things have to be fixed manually in the conflicted files.
+
+
+2. What is the difference between fork, branch, and clone?
+Fork: The fork is the process when a copy of the repository is made. 
+      It's usually experimentation in the project without affecting the original project. 
+       They’re used to advise changes or take inspiration from someone else’s project.
+Branch: Git branches refer to individual projects within a git repository. 
+        If there are several branches in a repository, then each branch can have entirely different files and folders.
+clone: Git clone refers to creating a clone or a copy of an existing git repository in a new directory. 
+        Cloning automatically creates a connection that points back to the original repository, which makes it very easy to interact with the central repository.
+        
+3. What is the difference between git merge and git rebase?
+git merge: To incorporate new commits into your feature branch, you use merge.
+        Creates an extra merge commit every time you need to incorporate changes.
+        Pollutes your feature branch history.
+git rebase: Incorporates all the new commits in the master branch.
+            Rewrites the project history by creating brand new commits for each commit in the original branch
+            
+            In git merge, a new commit is created and the history of the feature branch can be seen in the history with merge point as new commit.
+            In git rebase, it adds the history of the feature branch to the main branch.
+            
+ 4.  What is the command used to fix a broken commit?
+To fix a broken commit in Git, you may use the “git commit --amend” command, 
+which helps you combine the staged changes with the previous commits instead of creating an entirely new commit.
+
+5. git remote: git remote enables you to create, view, and delete connections to other repositories.
+               It's used to refer to a remote repository or a central repository.
+               
+   git clone: git clone enables you to create a clone or copy of the target repository. 
+              It's used to target a different already existing repository.
+
+6.  What is git stash drop?
+The Git stash drop command is used to remove a particular stash. 
+If there’s a stash you're no longer using or you want to remove a specific item of stash from the list, you can use the stash commands.
+Let’s say you want to delete an item named stash@{abc}; you can use the command git stash drop stash@{abc}.
+
+7. git reverting: The revert command in Git is used to create a new commit that undoes the changes made in the previous commit. 
+When you use this command, a new history is added to the project; the existing history is not modified.
+
+git resetting: Git reset is a command that is used to undo the local changes that have been made to a Git repository. 
+Git reset operates on the following: commit history, the staging index, and the working directory.
+
+8. What is “git cherry-pick”?
+The command git cherry-pick enables you to pick up commits from a branch within a repository and apply it to another branch. 
+This command is useful to undo changes when any commit is accidentally made to the wrong branch. 
+Then, you can switch to the correct branch and use this command to cherry-pick the commit.
